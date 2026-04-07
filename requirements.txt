@@ -1,3 +1,7 @@
 pandas
 numpy
 pyarrow
+xgboost
+scikit-learn
+shap
+matplotlib
