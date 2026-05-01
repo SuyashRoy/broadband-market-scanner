@@ -1,0 +1,13 @@
+services:
+  # --- Jupyter Lab for Data Pipeline ---
+  jupyter:
+    build:
+      context: ./pipeline
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./pipeline/notebooks:/app/notebooks
+    ports:
+      - "8888:8888"
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
